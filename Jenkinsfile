@@ -5,7 +5,7 @@ pipeline{
         DOCKERHUB_USERNAME = "anuragjoshi01"
         APP_NAME = "${node-app-cicd}"
         IMAGE_TAG = "${BUILD_NUMBER}"
-        IMAGE_NAME = "${DOCKERHUB_USERNAME}" + "/" + "${APP_NAME}"
+        IMAGE_NAME = "${DOCKERHUB_USERNAME}"
         RIGSTRY_CREDS = 'dockerhub'
     }
 
