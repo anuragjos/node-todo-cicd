@@ -4,9 +4,18 @@ pipeline{
         stage("Git Checkout"){
             steps{
                 script{
-                    git branch: 'devops', url: 'https://github.com/anuragjos/node-todo-cicd.git'
+                   git credentialsId: 'github',
+                   url: 'https://github.com/anuragjos/node-todo-cicd.git',
+                   branch: 'devops'
                 }
             }
         }
+        // stage("Build and Test"){
+        //     steps{
+        //         script{
+
+        //         }
+        //     }
+        // }
     }
 }
